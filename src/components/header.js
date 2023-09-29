@@ -13,10 +13,10 @@ const Header = (title, date, temp) => {
   //
 
   const titleDiv = document.createElement('div');
-  titleDiv.classList.add = 'header';
+  titleDiv.classList.add('header');
 
   const spanDate = document.createElement('span');
-  spanDate.classList.add = 'date';
+  spanDate.classList.add('date');
   spanDate.textContent = `${date}`;
   titleDiv.appendChild(spanDate);
   
@@ -26,10 +26,10 @@ const Header = (title, date, temp) => {
   titleDiv.appendChild(titleHeader);
 
   const spanTemp = document.createElement('span');
-  spanTemp.classList.add = 'temp';
+  spanTemp.classList.add('temp');
   spanTemp.textContent = `${temp}`;
   titleDiv.appendChild(spanTemp);
-  document.body.appendChild(titleDiv);
+  
 
   return titleDiv;
     
@@ -54,7 +54,6 @@ const headerAppender = (selector) => {
 
   const headerNew = Header('Cri','02/03/1989','98.9');
   document.querySelector(selector).appendChild(headerNew);
-  return headerNew;
 }
 
 export { Header, headerAppender }
